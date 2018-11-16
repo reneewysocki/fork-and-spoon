@@ -1,114 +1,212 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <title>Fork 💗 Spoon</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="../photos/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../photos/favicon-16x16.png" sizes="16x16" />
 </head>
+
 <body>
     <div class="modal fade" id="myModal">
         <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">You Matched With: </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- <h5 class="modal-title">Your Spoon: </h5> -->
+                    <img class="img-fluid" src="../photos/your-spoon.png" alt="Your Spoon" style="width: 100%">
+                </div>
+                <div class="modal-body">
+                    <p id='friendName'></p>
+                    <img id='friendImg' src="" height='200'>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Find Another Spoon</button>
+                </div> -->
             </div>
-            <div class="modal-body">
-              <p id='friendName'></p>
-              <img id='friendImg' src="" height='200'>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Take it Again</button>
-            </div>
-          </div>
         </div>
-      </div>
-  
-      <div class="container">
-          <h1>Survey Questions</h1>	
-          <hr>
-          <h3>About You</h3>
-          <div class="form-group">
-              <label for="Name">Name (Required)</label>
-              <input type="text" class='form-control' id='name' placeholder="Your Name">
-          </div>
-          <div class="form-group">
-              <label for="image">Link to Photo Image (Required)</label>
-              <input type="text" class='form-control' id='image' placeholder="Link to your photo">
-          </div>
-          <hr>
-          <h3>Question 1</h3>
-          <h4>What is your favorite kind of paper?</h4>
-          <div class="form-group">
-              <select name="quest1" id="quest1">
-                  <option value="">Select an Option</option>
-                  <option value="1">Printer Paper</option>
-                  <option value="2">Card Stock</option>
-                  <option value="3">Glossy Photo Paper</option>
-                  <option value="4">Wrapping Paper</option>
-                  <option value="5">Rolling Paper</option>
-              </select>
-          </div>
-          <h3>Question 2</h3>
-          <h4>What got you in trouble in high school?</h4>
-          <div class="form-group">
-              <select name="quest2" id="quest2">
-                  <option value="">Select an Option</option>
-                  <option value="1">Eating in class</option>
-                  <option value="2">Skipping Class</option>
-                  <option value="3">Pulling Pranks</option>
-                  <option value="4">Talking</option>
-                  <option value="5">You Didn't Get in Trouble</option>
-              </select>
-          </div>
-          <h3>Question 3</h3>
-          <h4>Do you like your job?</h4>
-          <div class="form-group">
-              <select name="quest3" id="quest3">
-                  <option value="">Select an Option</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                  <option value="3">I act like I hate it, but I secretly love it. </option>
-              </select>
-          </div>
-          <h3>Question 4</h3>
-          <h4>What is your idea of a perfect date?</h4>
-          <div class="form-group">
-              <select name="quest4" id="quest4">
-                  <option value="">Select an Option</option>
-                  <option value="1">Dinner and a movie</option>
-                  <option value="2">Going to a jazz club</option>
-                  <option value="3">Straight to the bedroom</option>
-                  <option value="4">Make dinner at home</option>
-                  <option value="5">Go roller skating or ice-skating</option>
-              </select>
-          </div>
-          <h3>Question 5</h3>
-          <h4>What is your best quality?</h4>
-          <div class="form-group">
-              <select name="quest5" id="quest5">
-                  <option value="">Select an Option</option>
-                  <option value="1">I am funny</option>
-                  <option value="2">I am quiet</option>
-                  <option value="3">I am loyal</option>
-                  <option value="4">I am fun</option>
-                  <option value="5">I am nice</option>
-              </select>
-          </div>
-          <div class="btn btn-primary btn-block" id="submit"><h4><span class="glyphicon glyphicon-question-sign"></span> Find a friend</h4></div>
-          <hr>
-          <div>
-              <a href="/api/friends">API Friends List</a>
-              <span>|</span>
-              <a href="https://github.com/reneewysocki" target="_blank">Github Repo</a>
-          </div>
-          <br>
-      </div>
-      <script src='logic.js'></script>
+    </div>
+
+    <div class="container" id="survey">
+
+        <div class="text-center">
+            <a href="/"><img src="photos/forkspoon-logo-trans.png" class="logo img-fluid"></a>
+        </div>
+
+        <div class="container" id="about-you">
+            <span style="text-align: center">
+                <h3>About You</h3>
+            </span>
+            <div class="form-group">
+                <label for="Name">Name (Required)</label>
+                <input type="text" class='form-control' id='name' placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="image">Link to Photo Image (Required)</label>
+                <input type="text" class='form-control' id='image' placeholder="Link to your photo">
+            </div>
+        </div>
+
+        <div class="quest-group">
+            <h4>1. How important is dessert to your meal?</h4>
+            <div class="form-group">
+                <select name="quest1" id="quest1">
+                    <option value="" class="option">Select an Option</option>
+                    <option value="1" class="option">1 - Don't need it</option>
+                    <option value="2" class="option">2</option>
+                    <option value="3" class="option">3</option>
+                    <option value="4" class="option">4</option>
+                    <option value="5" class="option">5 - Favorite part of the meal!</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>2. How important is meat/animal protein to your meal?</h4>
+            <div class="form-group">
+                <select name="quest2" id="quest2">
+                    <option value="" class="option">Select an Option</option>
+                    <option value="1" class="option">1 - Vegan/Vegetarian</option>
+                    <option value="2" class="option">2</option>
+                    <option value="3" class="option">3</option>
+                    <option value="4" class="option">4</option>
+                    <option value="5" class="option">5 - Favorite part of the meal!</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>3. How spicy do you like your food?</h4>
+            <div class="form-group">
+                <select name="quest3" id="quest3">
+                    <option value="" class="option">Select an Option</option>
+                    <option value="1">1 - Mild</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - I like it when it hurts!</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>4. How many times a week do you eat at a chain resturant?</h4>
+            <div class="form-group">
+                <select name="quest4" id="quest4">
+                    <option value="">Select an Option</option>
+                    <option value="1">0 - 1</option>
+                    <option value="2">2 - 3</option>
+                    <option value="3">4 - 5</option>
+                    <option value="4">6 - 7</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>5. How many times a week do you cook for yourself?</h4>
+            <div class="form-group">
+                <select name="quest5" id="quest5">
+                    <option value="">Select an Option</option>
+                    <option value="1">0 - 1</option>
+                    <option value="2">2 - 3</option>
+                    <option value="3">4 - 5</option>
+                    <option value="4">6 - 7</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>6. What's your breakfast order? </h4>
+            <div class="form-group">
+                <select name="quest6" id="quest6">
+                    <option value="">Select an Option</option>
+                    <option value="1">Pancakes/Waffles</option>
+                    <option value="2">Eggs</option>
+                    <option value="3">Cereal</option>
+                    <option value="4">Pastries</option>
+                    <option value="5">Fruit</option>
+                    <option value="6">Just coffee, no breakfast.</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>7. How likely are you to try the new ethnic restaurant that just opened in your neighborhood? </h4>
+            <div class="form-group">
+                <select name="quest7" id="quest7">
+                    <option value="">Select an Option</option>
+                    <option value="1">1 - Definitely will not try it.</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 - Have to try it!</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>8. On a normal Tuesday night, you're most likely to... </h4>
+            <div class="form-group">
+                <select name="quest8" id="quest8">
+                    <option value="">Select an Option</option>
+                    <option value="1">Cook</option>
+                    <option value="2">Order In</option>
+                    <option value="3">Eat Out</option>
+                    <option value="4">Eat a Pre-Prepackaged Meal</option>
+                    <option value="5">Eat Leftovers</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>9. How many times a week do you drink alcohol?</h4>
+            <div class="form-group">
+                <select name="quest9" id="quest9">
+                    <option value="">Select an Option</option>
+                    <option value="1">0 - 1</option>
+                    <option value="2">2 - 3</option>
+                    <option value="3">4 - 5</option>
+                    <option value="4">6 - 7</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="quest-group">
+            <h4>10. My perfect meal is...</h4>
+            <div class="form-group">
+                <select name="quest10" id="quest10">
+                    <option value="">Select an Option</option>
+                    <option value="1">Steak</option>
+                    <option value="2">Fish</option>
+                    <option value="3">Mac & Cheese</option>
+                    <option value="4">Vegan</option>
+                </select>
+            </div>
+        </div>
+        <!-------------------------------------->
+        <div class="btn btn-block pink-button" id="submit">
+            <h4> <i class="fas fa-utensil-spoon"></i> Find Your Spoon</h4>
+        </div>
+        <hr>
+        <div>
+            <a href="/api/friends">API Friends List</a>
+            <span>|</span>
+            <a href="https://github.com/reneewysocki" target="_blank">Github Repo</a>
+        </div>
+        <br>
+    </div>
+    <script src='logic.js'></script>
 </body>
+
 </html>
