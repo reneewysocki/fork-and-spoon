@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/reneewysocki/fork-and-spoon#readme",
   "dependencies": {
+    "express":"*",
     "body-parser": "^1.18.3"
   }
 }
