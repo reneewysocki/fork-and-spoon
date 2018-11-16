@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/reneewysocki/fork-and-spoon/issues"
   },
-  "homepage": "https://github.com/reneewysocki/fork-and-spoon#readme"
+  "homepage": "https://github.com/reneewysocki/fork-and-spoon#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3"
+  }
 }
