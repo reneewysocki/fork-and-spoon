@@ -1,0 +1,62 @@
+body {
+    background-color: #272828;
+    background-image: url("../photos/footer_lodyas.png");
+    background-repeat: repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: #E5446D;
+}
+
+#head-container {
+    background-color: #272828;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    color: #F8F4E3;
+}
+
+.logo {
+    width: 75%;
+}
+
+.pink-button {
+    background-color: #E5446D;
+    border: 2px solid #BC385A;
+    font-size: 18px;
+    color: #F8F4E3;
+}
+
+
+h3, h4, label {
+    color: #F8F4E3;
+    font-family: 'Montserrat', sans-serif;
+}
+
+select {
+    width: 100%;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+
+.quest-group {
+    margin-bottom: 30px;
+}
+
+#about-you {
+    background-color: #E5446D;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-content {
+    background-color: #E5446D;
+    text-align: center;
+    color: #F8F4E3;
+    font-size: 24px;
+}
